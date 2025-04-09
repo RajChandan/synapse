@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +123,29 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ADMIN_SITE_HEADER = "Synapse Consulting Admin"
+ADMIN_SITE_TITLE = "Synapse Consulting Portal"
+ADMIN_INDEX_TITLE = "Welcome to Synapse AI Admin"
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Synapse Admin",
+    "site_header": "Synapse Consulting Admin",
+    "site_brand": "Synapse AI",
+    "welcome_sign": "Welcome to Synapse Admin Dashboard",
+    "copyright": "Synapse Consulting",
+    "search_model": ["services.Webinar", "services.Course"],
+    "topmenu_links": [
+        {"name": "Home", "url": "/", "permissions": ["auth.view_user"]},
+    ],
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "icons": {
+        "services.Webinar": "fas fa-video",
+        "services.Workshop": "fas fa-chalkboard-teacher",
+        "services.Course": "fas fa-graduation-cap",
+        "services.DFYTool": "fas fa-robot",
+        "services.RetainerPlan": "fas fa-handshake",
+        "services.AcceleratorPackage": "fas fa-rocket",
+    },
+}
