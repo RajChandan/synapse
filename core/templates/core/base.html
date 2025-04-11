@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Synapse Consulting{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+    {% include 'core/includes/navbar.html' %}
+
+    <main class="min-h-[80vh]">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'core/includes/footer.html' %}
+
+</body>
+</html>
+
+{# core/includes/navbar.html #}
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-2xl font-bold text-indigo-600">Synapse</a>
+    <ul class="hidden md:flex space-x-8 text-sm font-semibold">
+      <li><a href="/services/" class="hover:text-indigo-600">Services</a></li>
+      <li><a href="/industries/" class="hover:text-indigo-600">Industries</a></li>
+      <li><a href="/pricing/" class="hover:text-indigo-600">Pricing</a></li>
+      <li><a href="/blog/" class="hover:text-indigo-600">Blog</a></li>
+      <li><a href="/contact/" class="hover:text-indigo-600">Contact</a></li>
+    </ul>
+    <a href="/insider/" class="hidden md:inline-block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Join Insider Club</a>
+  </div>
+</nav>
+
+{# core/includes/footer.html #}
+<footer class="bg-gray-100 border-t mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-10 text-sm text-gray-500">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; {{ year|default:2025 }} Synapse Consulting. All rights reserved.</p>
+      <div class="space-x-6">
+        <a href="/privacy/" class="hover:text-gray-700">Privacy Policy</a>
+        <a href="/terms/" class="hover:text-gray-700">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

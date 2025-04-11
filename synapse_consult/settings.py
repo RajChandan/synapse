@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "service",
     "industries",
     "pricing",
+    "insider",
 ]
 
 MIDDLEWARE = [
