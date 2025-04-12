@@ -1,0 +1,23 @@
+# Core framework
+Django>=5.2,<6.0
+
+# Admin enhancement
+django-jazzmin>=2.6.0
+
+# Optional: Environment management
+python-dotenv>=1.0.0
+
+# Optional: Static file compression (production)
+whitenoise>=6.6.0
+
+# For image upload fields
+Pillow>=10.0.0
+
+# For handling fonts, WOFF2, etc.
+fonttools>=4.40.0
+
+# Optional: Markdown (if your blog uses it)
+Markdown>=3.5.2
+
+# Optional: Slugify (for blog/industry pages)
+python-slugify>=8.0.1
