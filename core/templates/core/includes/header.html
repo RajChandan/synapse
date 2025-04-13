@@ -1,3 +1,5 @@
+{% load static %}
+
 <header id="masthead" class="site-header"
     style="--responsive-menu-primary-color:var(--dark-color);--responsive-menu-secondary-color:var(--light-color);">
     <div class="site-branding"
@@ -6,15 +8,18 @@
             <div class="site-branding-logo-text">
                 <div class="site-branding-logo">
                     <a href="index.html" class="logo"><img width="260" height="260"
-                            src="wp-content/uploads/sites/4/2019/02/logo_white.png" class="logo-img" alt=""
-                            decoding="async" fetchpriority="high"
-                            srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2019/02/logo_white.png 260w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2019/02/logo_white-160x160.png 160w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2019/02/logo_white-100x100.png 100w"
-                            sizes="(max-width: 260px) 100vw, 260px" /></a><a href="index.html" class="sticky-logo"><img
-                            width="260" height="200" src="wp-content/uploads/sites/4/2019/02/logo_black.png"
-                            class="sticky-logo-img" alt="" decoding="async" /></a><a href="index.html"
-                        class="responsive-menu-logo"><img width="260" height="200"
-                            src="wp-content/uploads/sites/4/2019/02/logo_black.png" class="responsive-menu-logo-img"
-                            alt="" decoding="async" /></a>
+                            src="{% static 'images/logo_white.png'%}" class="logo-img" alt="" decoding="async"
+                            fetchpriority="high" srcset="
+                            {% static 'images/logo_white.png' %} 260w,
+                            {% static 'images/logo_white-160x160.png' %} 160w,
+                            {% static 'images/logo_white-100x100.png' %} 100w"
+                            sizes="(max-width: 260px) 100vw, 260px" /></a>
+                    <a href="index.html" class="sticky-logo"><img width="260" height="200"
+                            src="{% static 'images/logo_black.png'%}" class="sticky-logo-img" alt=""
+                            decoding="async" /></a>
+                    <a href="index.html" class="responsive-menu-logo"><img width="260" height="200"
+                            src="{% static 'images/logo_black.png'%}" class="responsive-menu-logo-img" alt=""
+                            decoding="async" /></a>
                 </div><!-- .site-branding-logo -->
             </div><!-- .site-branding-logo-text -->
             <div id="site-navigation" class="main-navigation main-navigation-logo-area"
@@ -31,14 +36,17 @@
                                     <a href="index.html" aria-current="page">Home 01</a>
                                 </li>
                                 <li id="menu-item-1813"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1813"><a
-                                        href="home/home-02/index.html">Home 02</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1813">
+                                    <a href="home/home-02/index.html">Home 02</a>
+                                </li>
                                 <li id="menu-item-1816"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1816"><a
-                                        href="home/home-03/index.html">Home 03</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1816">
+                                    <a href="home/home-03/index.html">Home 03</a>
+                                </li>
                                 <li id="menu-item-2276"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2276"><a
-                                        href="home/home-04/index.html">Home 04</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2276">
+                                    <a href="home/home-04/index.html">Home 04</a>
+                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-1583"
@@ -46,23 +54,29 @@
                             <a href="about/index.html">About</a>
                             <ul class="sub-menu">
                                 <li id="menu-item-1856"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1856"><a
-                                        href="about/index.html">About Us</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1856">
+                                    <a href="about/index.html">About Us</a>
+                                </li>
                                 <li id="menu-item-1857"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1857"><a
-                                        href="about/about-me/index.html">About Me</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1857">
+                                    <a href="about/about-me/index.html">About Me</a>
+                                </li>
                                 <li id="menu-item-3261"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3261"><a
-                                        href="about/clients-partners/index.html">Clients &#038; Partners</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3261">
+                                    <a href="about/clients-partners/index.html">Clients &#038; Partners</a>
+                                </li>
                                 <li id="menu-item-42"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a
-                                        href="about/contact/index.html">Contact</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+                                    <a href="about/contact/index.html">Contact</a>
+                                </li>
                                 <li id="menu-item-1858"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1858"><a
-                                        href="about/page-not-found/index.html">404</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1858">
+                                    <a href="about/page-not-found/index.html">404</a>
+                                </li>
                                 <li id="menu-item-1859"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1859"><a
-                                        href="about/under-construction/index.html">Under Construction</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1859">
+                                    <a href="about/under-construction/index.html">Under Construction</a>
+                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-1860"
@@ -70,23 +84,29 @@
                             <a href="services/index.html">Services</a>
                             <ul class="sub-menu">
                                 <li id="menu-item-1862"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1862"><a
-                                        href="services/index.html">Our Services</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1862">
+                                    <a href="services/index.html">Our Services</a>
+                                </li>
                                 <li id="menu-item-1861"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1861"><a
-                                        href="services/single-service/index.html">Single Service</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1861">
+                                    <a href="services/single-service/index.html">Single Service</a>
+                                </li>
                                 <li id="menu-item-3179"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3179"><a
-                                        href="services/testimonials/index.html">Testimonials</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3179">
+                                    <a href="services/testimonials/index.html">Testimonials</a>
+                                </li>
                                 <li id="menu-item-2813"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2813"><a
-                                        href="services/get-quote/index.html">Get Quote</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2813">
+                                    <a href="services/get-quote/index.html">Get Quote</a>
+                                </li>
                                 <li id="menu-item-3262"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3262"><a
-                                        href="services/price-table/index.html">Price Table</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3262">
+                                    <a href="services/price-table/index.html">Price Table</a>
+                                </li>
                                 <li id="menu-item-3177"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3177"><a
-                                        href="services/faq/index.html">FAQ</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3177">
+                                    <a href="services/faq/index.html">FAQ</a>
+                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-1599"
@@ -150,7 +170,8 @@
                                         </li>
                                         <li id="menu-item-2574"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2574">
-                                            <a href="case-studies/index5b6a.html?pf_list_view=zig-zag">Zig-zag View</a>
+                                            <a href="case-studies/index5b6a.html?pf_list_view=zig-zag">Zig-zag
+                                                View</a>
                                         </li>
                                         <li id="menu-item-2575"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2575">
@@ -186,7 +207,8 @@
                                         </li>
                                         <li id="menu-item-2602"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2602">
-                                            <a href="shop/order-tracking-form/index.html">Order Tracking Form</a>
+                                            <a href="shop/order-tracking-form/index.html">Order Tracking
+                                                Form</a>
                                         </li>
                                         <li id="menu-item-45"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45">
@@ -222,11 +244,13 @@
                                         </li>
                                         <li id="menu-item-1301"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1301">
-                                            <a href="elements/inner-row-column/index.html">Inner Row &#038; Column</a>
+                                            <a href="elements/inner-row-column/index.html">Inner Row &#038;
+                                                Column</a>
                                         </li>
                                         <li id="menu-item-1310"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1310">
-                                            <a href="elements/countdown-counter/index.html">Countdown &#038; Counter</a>
+                                            <a href="elements/countdown-counter/index.html">Countdown &#038;
+                                                Counter</a>
                                         </li>
                                         <li id="menu-item-1351"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1351">
@@ -282,7 +306,8 @@
                                     <ul class="sub-menu">
                                         <li id="menu-item-3337"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3337">
-                                            <a href="elements/animated-headline/index.html">Animated Headline</a>
+                                            <a href="elements/animated-headline/index.html">Animated
+                                                Headline</a>
                                         </li>
                                         <li id="menu-item-1420"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1420">
@@ -337,9 +362,43 @@
                 <div class="bt_bb_button bt_bb_color_scheme_10 bt_bb_icon_position_right bt_bb_style_outline bt_bb_size_small bt_bb_shape_round bt_bb_target_self bt_bb_align_inherit btWithIcon"
                     style="; --primary-color:var(--dark-color); --secondary-color:var(--light-color);"
                     data-bt-override-class="{}"><a href="about/contact/index.html" target="_self" class="bt_bb_link"
-                        title="GET IN TOUCH"><span class="bt_bb_button_text">GET IN TOUCH</span><span
-                            data-ico-remixiconsbusiness="&#xe976;" class="bt_bb_icon_holder"></span></a></div>
+                        title="GET IN TOUCH"><span class="bt_bb_button_text">GET IN
+                            TOUCH</span><span data-ico-remixiconsbusiness="&#xe976;"
+                            class="bt_bb_icon_holder"></span></a></div>
             </div>
         </div><!-- .site-menu-responsive-widgets-inner -->
     </div><!-- .site-menu-responsive-widgets -->
 </header><!-- .site-header -->
+<div id="masthead-responsive" class="site-header-responsive"
+    style="--primary-color:var(--dark-color);--secondary-color:var(--light-color);;--primary-sticky-color:var(--dark-color);--secondary-sticky-color:var(--light-color);">
+    <div class="site-header-responsive-inner">
+        <div class="site-header-responsive-trigger">
+            <div class="site-header-responsive-trigger-icon">
+                <div class="trigger-line-1"></div>
+                <div class="trigger-line-2"></div>
+                <div class="trigger-line-3"></div>
+                <div class="trigger-line-4"></div>
+            </div>
+        </div>
+        <div class="site-header-responsive-logo-text">
+            <div class="site-header-responsive-logo">
+                <a href="index.html" class="responsive-logo"><img width="260" height="200"
+                        src="{% static 'images/logo_white.png'%}" class="responsive-logo-img" alt=""
+                        decoding="async" /></a> <a href="index.html" class="responsive-sticky-logo"><img width="260"
+                        height="200" src="{% static 'images/logo_black.png'%}" class="responsive-sticky-logo-img" alt=""
+                        decoding="async" /></a>
+            </div><!-- .site-header-responsive-logo -->
+        </div><!-- .site-header-responsive-logo -->
+    </div><!-- .site-header-responsive-inner -->
+</div><!-- .site-header-responsive -->
+<script>
+    /* Fix content padding */
+    var hasResponsiveClass = document.body.classList.contains('bt-header-responsive-active');
+    var masthead = hasResponsiveClass ? document.getElementById('masthead-responsive') : document.getElementById('masthead');
+    var mastheadHeight = masthead.clientHeight + 'px';
+
+    var headerInnerElement = document.querySelector('.page-header .page-header-inner');
+    if (headerInnerElement !== null) {
+        headerInnerElement.style.paddingTop = mastheadHeight;
+    }
+</script>

@@ -6,40 +6,155 @@
   <meta charset="UTF-8">
   <title>{% block title %}Synapse Consulting{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="robots" content="max-image-preview:large" />
-  <link rel="profile" href="https://gmpg.org/xfn/11">
-
-  <!-- Preload hero image -->
-  <link rel="preload" fetchpriority="high" as="image" href="{% static 'images/bottom_black_01.png' %}" type="image/png">
-
-  <!-- Aiko Theme CSS -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style-large.css' %}" media="screen and (min-width: 1024px)">
-  <link rel="stylesheet" href="{% static 'css/style-small.css' %}" media="screen and (max-width: 1023px)">
-  <link rel="stylesheet" href="{% static 'css/brands.css' %}">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=IBM+Plex+Serif&display=swap"
-    rel="stylesheet">
-  <link rel="preload" href="{% static 'fonts/Inter.woff2' %}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{% static 'fonts/Cardo.woff2' %}" as="font" type="font/woff2" crossorigin>
-
-  <!-- Favicon -->
-  <link rel="icon" href="{% static 'images/favicon-100.png' %}" sizes="32x32" />
-  <link rel="icon" href="{% static 'images/favicon-300.png' %}" sizes="192x192" />
-  <link rel="apple-touch-icon" href="{% static 'images/favicon-300.png' %}" />
-  <meta name="msapplication-TileImage" content="{% static 'images/favicon-300.png' %}" />
-
-  <!-- Responsive overrides -->
   <style>
     img:is([sizes="auto" i], [sizes^="auto," i]) {
       contain-intrinsic-size: 3000px 1500px;
     }
+  </style>
 
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" fetchpriority="high" as="image" href="{% static 'images/bottom_black_01.png' %}" type="image/png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style-large.css' %}" media="(min-width: 1024px)">
+  <link rel="stylesheet" href="{% static 'css/style-small.css' %}" media="(max-width: 1023px)">
+  <link rel="stylesheet" href="{% static 'css/brands.css' %}">
+  <script id="boldthemes-text-strings-js-extra">
+    var boldthemes_text_strings = { "override_alert": "This page\/post is using Override Global Settings. Some options might not work as expected." };
+  </script>
+  <link rel="canonical" href="index.html" />
+  <script>
+    // Select the node that will be observed for mutations
+    const targetNode = document.documentElement;
+
+    // Options for the observer (which mutations to observe)
+    const config = { attributes: false, childList: true, subtree: false };
+
+    var bold_timeline_item_button_done = false;
+    var css_override_item_done = false;
+    var css_override_group_done = false;
+    var css_override_container_done = false;
+
+    // Callback function to execute when mutations are observed
+    const callback = function (mutationsList, observer) {
+      var i;
+      for (i = 0; i < mutationsList.length; i++) {
+        if (mutationsList[i].type === 'childList') {
+          if (typeof jQuery !== 'undefined' && jQuery('.bold_timeline_item_button').length > 0 && !bold_timeline_item_button_done) {
+            bold_timeline_item_button_done = true;
+            jQuery('.bold_timeline_item_button').each(function () {
+              var css_override = jQuery(this).data('css-override');
+              if (css_override != '') {
+                var id = jQuery(this).attr('id');
+                css_override = css_override.replace(/(\.bold_timeline_item_button)([\.\{\s])/g, '.bold_timeline_item_button#' + id + '$2');
+                var head = document.getElementsByTagName('head')[0];
+                var style = document.createElement('style');
+                style.appendChild(document.createTextNode(css_override));
+                head.appendChild(style);
+              }
+            });
+          }
+          if (typeof jQuery !== 'undefined' && jQuery('.bold_timeline_item').length > 0 && !css_override_item_done) {
+            css_override_item_done = true;
+            jQuery('.bold_timeline_item').each(function () {
+              var css_override = jQuery(this).data('css-override');
+              if (css_override != '') {
+                var id = jQuery(this).attr('id');
+                css_override = css_override.replace(/(\.bold_timeline_item)([\.\{\s])/g, '.bold_timeline_item#' + id + '$2');
+                var head = document.getElementsByTagName('head')[0];
+                var style = document.createElement('style');
+                style.appendChild(document.createTextNode(css_override));
+                head.appendChild(style);
+              }
+            });
+          }
+          if (typeof jQuery !== 'undefined' && jQuery('.bold_timeline_group').length > 0 && !css_override_group_done) {
+            css_override_group_done = true;
+            jQuery('.bold_timeline_group').each(function () {
+              var css_override = jQuery(this).data('css-override');
+              if (css_override != '') {
+                var id = jQuery(this).attr('id');
+                css_override = css_override.replace(/(\.bold_timeline_group)([\.\{\s])/g, '.bold_timeline_group#' + id + '$2');
+                var head = document.getElementsByTagName('head')[0];
+                var style = document.createElement('style');
+                style.appendChild(document.createTextNode(css_override));
+                head.appendChild(style);
+              }
+            });
+          }
+          if (typeof jQuery !== 'undefined' && jQuery('.bold_timeline_container').length > 0 && !css_override_container_done) {
+            css_override_container_done = true;
+            jQuery('.bold_timeline_container').each(function () {
+              var css_override = jQuery(this).data('css-override');
+              if (css_override != '') {
+                var id = jQuery(this).attr('id');
+                css_override = css_override.replace(/(\.bold_timeline_container)([\.\{\s])/g, '#' + id + '$2');
+                var head = document.getElementsByTagName('head')[0];
+                var style = document.createElement('style');
+                style.appendChild(document.createTextNode(css_override));
+                head.appendChild(style);
+              }
+            });
+          }
+        }
+      }
+    };
+
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(callback);
+
+    // Start observing the target node for configured mutations
+    observer.observe(targetNode, config);
+
+    // Later, you can stop observing
+    document.addEventListener('DOMContentLoaded', function () { observer.disconnect(); }, false);
+
+  </script>
+
+  <noscript>
+    <style>
+      .woocommerce-product-gallery {
+        opacity: 1 !important;
+      }
+    </style>
+  </noscript>
+
+  <style class='wp-fonts-local'>
+    @font-face {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 300 900;
+      font-display: fallback;
+      src: url("{% static ' fonts/Inter-VariableFont_slnt%2cwght.woff2' %}") format('woff2');
+      font-stretch: normal;
+    }
+
+    @font-face {
+      font-family: Cardo;
+      font-style: normal;
+      font-weight: 400;
+      font-display: fallback;
+      src: url("{% static 'fonts/cardo_normal_400.woff2' %}") format('woff2');
+    }
+  </style>
+
+  <link rel="icon" href="{% static 'images/favicon-100.png' %}" sizes="32x32">
+  <link rel="icon" href="{% static 'images/favicon-300.png' %}" sizes="192x192">
+  <link rel="apple-touch-icon" href="{% static 'images/favicon-300.png' %}">
+  <meta name="msapplication-TileImage" content="{% static 'images/favicon-300.png' %}" />
+  <style id="wp-custom-css">
+    .bt_bb_section,
+    .site-footer {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 500px;
+    }
+  </style>
+  <style>
     @media only screen and (min-width: 769px) {
       #aiHeadline {
         height: 288px;
@@ -48,6 +163,7 @@
       .heroCnt {
         height: 144px;
       }
+
     }
 
     @media only screen and (max-width: 768px) {
@@ -58,36 +174,29 @@
       .heroCnt {
         height: 108px;
       }
-    }
 
-    .bt_bb_section,
-    .site-footer {
-      content-visibility: auto;
-      contain-intrinsic-size: auto 500px;
     }
   </style>
 
-  <!-- GTM + Bold Timeline Logic -->
-  <script>
-    var gtm4wp_datalayer_name = "dataLayer";
-    var dataLayer = dataLayer || [];
-    window.bt_bb_preview = false;
-    window.bt_bb_fe_preview = false;
-    window.bt_bb_custom_elements = false;
-  </script>
+  <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <script>
-    const targetNode = document.documentElement;
-    const config = { attributes: false, childList: true, subtree: false };
-    const callback = function (mutationsList, observer) {
-      // Timeline style override logic (can be customized or removed)
-    };
-    const observer = new MutationObserver(callback);
-    observer.observe(targetNode, config);
-    document.addEventListener('DOMContentLoaded', function () {
-      observer.disconnect();
-    }, false);
-  </script>
+
+
+
+
+  <link rel="stylesheet" id="bt_bb_slick-css" href="{% static 'css/slick.css' %}" onload="this.media='all'"
+    media="print">
+  <link rel="stylesheet" id="contact-form-7-css" href="{% static 'css/styles1eb7.css' %}" onload="this.media='all'"
+    media="print">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=IBM+Plex+Serif&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" id="boldthemes-fonts-css"
+    href="https://fonts.googleapis.com/css2?family=Plus%20Jakarta%20Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Space%20Grotesk:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;subset=latin,latin-ext&amp;display=swap"
+    onload="this.media='all'" media="print">
+  <link rel="stylesheet" id="aiko-style-css" href="{% static 'css/style8a54.css' %}" onload="this.media='all'"
+    onload="this.media='all'" media="print">
 </head>
 
 <body
@@ -95,7 +204,7 @@
   data-header-responsive-breakpoint="1024" data-sidebar-responsive-breakpoint="1024"
   data-sticky-header-scroll-breakpoint="60" data-copy-to-clipboard-ok="Copied current url to clipboard"
   data-copy-to-clipboard-notok="Error. Could not copy current url" style="
-    --page-primary-color: var(--dark-color);
+ --page-primary-color: var(--dark-color);
     --page-secondary-color: var(--light-color);
     --button-primary-color: var(--accent-color);
     --button-secondary-color: var(--alternate-color);
@@ -140,59 +249,510 @@
     --button-text-transform: uppercase;
     --button-font-style: none;
     --button-letter-spacing: 0px;
-  ">
-  <!-- Responsive Breakpoint Logic for Header/Sidebar -->
+
+    ">
   <script>
     var header_responsive_breakpoint = parseInt(document.body.getAttribute('data-header-responsive-breakpoint'));
     var sidebar_responsive_breakpoint = parseInt(document.body.getAttribute('data-sidebar-responsive-breakpoint'));
     var windowWidth = window.innerWidth;
-
-    // Handle responsive header
+    console.log(windowWidth, ' === windowwidth');
+    /* Show/hide responsive header */
+    console.log(header_responsive_breakpoint, ' ------------ ', sidebar_responsive_breakpoint);
     if (header_responsive_breakpoint > 0) {
       if (windowWidth < header_responsive_breakpoint) {
         if (!document.body.classList.contains('bt-header-responsive-active')) {
           document.body.classList.add('bt-header-responsive-active');
           document.body.classList.remove('bt-header-responsive-inactive');
-          if (typeof boldthemes_requestTimeout !== 'undefined') {
-            boldthemes_requestTimeout(boldthemes_responsive_header_add_active_class, 200);
-          }
+          boldthemes_requestTimeout(boldthemes_responsive_header_add_active_class, 200);
         }
       } else {
-        document.body.classList.remove('bt-header-responsive-active', 'bt-header-responsive-ready');
-        document.body.classList.add('bt-header-responsive-inactive');
+        if (!document.body.classList.contains('bt-header-responsive-inactive')) {
+          document.body.classList.remove('bt-header-responsive-active', 'bt-header-responsive-ready');
+          document.body.classList.add('bt-header-responsive-inactive');
+        }
       }
     }
-
-    // Handle responsive sidebar
+    /* Move sidebar */
     if (sidebar_responsive_breakpoint > 0) {
-      if (windowWidth < sidebar_responsive_breakpoint) {
-        document.body.classList.add('bt-sidebar-responsive-active');
-        document.body.classList.remove('bt-sidebar-responsive-inactive');
+      if (windowWidth < sidebar_responsive_breakpoint && sidebar_responsive_breakpoint > 0) {
+        if (!document.body.classList.contains('bt-sidebar-responsive-active')) {
+          document.body.classList.add('bt-sidebar-responsive-active');
+          document.body.classList.remove('bt-sidebar-responsive-inactive');
+        }
       } else {
-        document.body.classList.remove('bt-sidebar-responsive-active');
-        document.body.classList.add('bt-sidebar-responsive-inactive');
+        if (!document.body.classList.contains('bt-sidebar-responsive-inactive')) {
+          document.body.classList.remove('bt-sidebar-responsive-active');
+          document.body.classList.add('bt-sidebar-responsive-inactive');
+        }
       }
     }
   </script>
+
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
     {% include 'core/includes/header.html' %}
+    {% block content %}
+    {% endblock %}
   </div>
 
+  <script>
+    (function () {
+      var c = document.body.className;
+      c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+      document.body.className = c;
+    })();
+  </script>
+  <style id='bt-widget-additional-front-inline-css'>
+    #boldthemes_button_widget-3 {
+      --widget-sticky-primary-color: var(--dark-color);
+      --widget-sticky-secondary-color: var(--light-color);
+    }
+  </style>
+  <link rel="stylesheet" id="bt_bb_slick-css" href="{% static 'css/slick5223.css' %}" onload="this.media='all'"
+    media="print">
+  <link rel="stylesheet" id="contact-form-7-css" href="{% static 'css/styles1eb7.css' %}" onload="this.media='all'"
+    media="print">
 
-  <main>
-    {% block content %}{% endblock %}
-  </main>
+  <link rel="stylesheet" id="boldthemes-fonts-css"
+    href="https://fonts.googleapis.com/css2?family=Plus%20Jakarta%20Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Space%20Grotesk:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;subset=latin,latin-ext&amp;display=swap"
+    onload="this.media='all'" media="print">
+  <link rel="stylesheet" id="aiko-style-css" href="{% static 'css/style8a54.css' %}" onload="this.media='all'"
+    media="print">
+  <style id="aiko-style-inline-css">
+    @font-face {
+      font-family: "Essential";
+      src: url("{% static 'fonts/Essential.woff' %}") format("woff"),
+      url("{% static 'fonts/Essential.ttf' %}") format("truetype");
+    }
 
-  {% include 'core/includes/footer.html' %}
+    *[data-ico-essential]:before {
+      font-family: Essential;
+      content: attr(data-ico-essential);
+    }
 
-  <!-- JS Scripts -->
-  <script src="{% static 'js/jquery.magnific-popup.min5223.js' %}"></script>
-  <script src="{% static 'js/slick.min5223.js' %}"></script>
-  <script src="{% static 'js/bt_bb_elements5223.js' %}"></script>
-  <script src="{% static 'js/bt_bb_cost_calculator5223.js' %}"></script>
-  <script src="{% static 'js/bold-timelined.js' %}"></script>
-  <script src="{% static 'js/bt-bb-light.js' %}"></script>
+    @font-face {
+      font-family: "FontAwesome5Brands";
+      src: url("{% static 'fonts/FontAwesome5Brands.woff2' %}") format("woff2"),
+      url("{% static 'fonts/FontAwesome5Brands.woff' %}") format("woff");
+    }
+
+    *[data-ico-fontawesome5brands]:before {
+      font-family: FontAwesome5Brands;
+      content: attr(data-ico-fontawesome5brands);
+    }
+
+    @font-face {
+      font-family: "FontAwesome5Regular";
+      src: url("{% static 'fonts/FontAwesome5Regular.woff2' %}") format("woff2"),
+      url("{% static 'fonts/FontAwesome5Regular.woff' %}") format("woff");
+    }
+
+    *[data-ico-fontawesome5regular]:before {
+      font-family: FontAwesome5Regular;
+      content: attr(data-ico-fontawesome5regular);
+    }
+
+    @font-face {
+      font-family: "FontAwesome5Solid";
+      src: url("{% static 'fonts/FontAwesome5Solid.woff2' %}") format("woff2"),
+      url("{% static 'fonts/FontAwesome5Solid.woff' %}") format("woff");
+    }
+
+    *[data-ico-fontawesome5solid]:before {
+      font-family: FontAwesome5Solid;
+      content: attr(data-ico-fontawesome5solid);
+    }
+
+    @font-face {
+      font-family: "FontAwesome6Brands";
+      src: url("{% static 'fonts/FontAwesome6Brands.woff2' %}") format("woff2"),
+      url("{% static 'fonts/FontAwesome6Brands.woff' %}") format("woff"),
+      url("{% static 'fonts/FontAwesome6Brands.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-fontawesome6brands]:before {
+      font-family: FontAwesome6Brands;
+      content: attr(data-ico-fontawesome6brands);
+    }
+
+    @font-face {
+      font-family: "FontAwesome6Regular";
+      src: url("{% static 'fonts/FontAwesome6Regular.woff2' %}") format("woff2"),
+      url("{% static 'fonts/FontAwesome6Regular.woff' %}") format("woff"),
+      url("{% static 'fonts/FontAwesome6Regular.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-fontawesome6regular]:before {
+      font-family: FontAwesome6Regular;
+      content: attr(data-ico-fontawesome6regular);
+    }
+
+    @font-face {
+      font-family: "FontAwesome6Solid";
+      src: url("{% static 'fonts/FontAwesome6Solid.woff2' %}") format("woff2"),
+      url("{% static 'fonts/FontAwesome6Solid.woff' %}") format("woff"),
+      url("{% static 'fonts/FontAwesome6Solid.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-fontawesome6solid]:before {
+      font-family: FontAwesome6Solid;
+      content: attr(data-ico-fontawesome6solid);
+    }
+
+    @font-face {
+      font-family: "Icon7Stroke";
+      src: url("{% static 'fonts/Icon7Stroke.woff2' %}") format("woff2"),
+      url("{% static 'fonts/Icon7Stroke.woff' %}") format("woff"),
+      url("{% static 'fonts/Icon7Stroke.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-icon7stroke]:before {
+      font-family: Icon7Stroke;
+      content: attr(data-ico-icon7stroke);
+    }
+
+    @font-face {
+      font-family: "AI";
+      src: url("{% static 'fonts/AI.woff' %}") format("woff"),
+      url("{% static 'fonts/AI.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-ai]:before {
+      font-family: AI;
+      content: attr(data-ico-ai);
+    }
+
+    @font-face {
+      font-family: "Artificial";
+      src: url("{% static 'fonts/Artificial.woff' %}") format("woff"),
+      url("{% static 'fonts/Artificial.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-artificial]:before {
+      font-family: Artificial;
+      content: attr(data-ico-artificial);
+    }
+
+    @font-face {
+      font-family: "Chatbot";
+      src: url("{% static 'fonts/Chatbot.woff' %}") format("woff"),
+      url("{% static 'fonts/Chatbot.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-chatbot]:before {
+      font-family: Chatbot;
+      content: attr(data-ico-chatbot);
+    }
+
+    @font-face {
+      font-family: "DeliveryBot";
+      src: url("{% static 'fonts/DeliveryBot.woff' %}") format("woff"),
+      url("{% static 'fonts/DeliveryBot.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-deliverybot]:before {
+      font-family: DeliveryBot;
+      content: attr(data-ico-deliverybot);
+    }
+
+    @font-face {
+      font-family: "IoniconsFilled";
+      src: url("{% static 'fonts/IoniconsFilled.woff' %}") format("woff"),
+      url("{% static 'fonts/IoniconsFilled.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-ioniconsfilled]:before {
+      font-family: IoniconsFilled;
+      content: attr(data-ico-ioniconsfilled);
+    }
+
+    @font-face {
+      font-family: "IoniconsLogos";
+      src: url("{% static 'fonts/IoniconsLogos.woff' %}") format("woff"),
+      url("{% static 'fonts/IoniconsLogos.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-ioniconslogos]:before {
+      font-family: IoniconsLogos;
+      content: attr(data-ico-ioniconslogos);
+    }
+
+    @font-face {
+      font-family: "IoniconsOutline";
+      src: url("{% static 'fonts/IoniconsOutline.woff' %}") format("woff"),
+      url("{% static 'fonts/IoniconsOutline.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-ioniconsoutline]:before {
+      font-family: IoniconsOutline;
+      content: attr(data-ico-ioniconsoutline);
+    }
+
+    @font-face {
+      font-family: "IoniconsSharp";
+      src: url("{% static 'fonts/IoniconsSharp.woff' %}") format("woff"),
+      url("{% static 'fonts/IoniconsSharp.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-ioniconssharp]:before {
+      font-family: IoniconsSharp;
+      content: attr(data-ico-ioniconssharp);
+    }
+
+    @font-face {
+      font-family: "MachineLearning";
+      src: url("{% static 'fonts/MachineLearning.woff' %}") format("woff"),
+      url("{% static 'fonts/MachineLearning.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-machinelearning]:before {
+      font-family: MachineLearning;
+      content: attr(data-ico-machinelearning);
+    }
+
+    @font-face {
+      font-family: "RemixIconsBuildings";
+      src: url("{% static 'fonts/RemixIconsBuildings.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsBuildings.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsbuildings]:before {
+      font-family: RemixIconsBuildings;
+      content: attr(data-ico-remixiconsbuildings);
+    }
+
+    @font-face {
+      font-family: "RemixIconsBusiness";
+      src: url("{% static 'fonts/RemixIconsBusiness.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsBusiness.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsbusiness]:before {
+      font-family: RemixIconsBusiness;
+      content: attr(data-ico-remixiconsbusiness);
+    }
+
+    @font-face {
+      font-family: "RemixIconsCommunication";
+      src: url("{% static 'fonts/RemixIconsCommunication.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsCommunication.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconscommunication]:before {
+      font-family: RemixIconsCommunication;
+      content: attr(data-ico-remixiconscommunication);
+    }
+
+    @font-face {
+      font-family: "RemixIconsDesign";
+      src: url("{% static 'fonts/RemixIconsDesign.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsDesign.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsdesign]:before {
+      font-family: RemixIconsDesign;
+      content: attr(data-ico-remixiconsdesign);
+    }
+
+    @font-face {
+      font-family: "RemixIconsDevelopment";
+      src: url("{% static 'fonts/RemixIconsDevelopment.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsDevelopment.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsdevelopment]:before {
+      font-family: RemixIconsDevelopment;
+      content: attr(data-ico-remixiconsdevelopment);
+    }
+
+    @font-face {
+      font-family: "RemixIconsDevice";
+      src: url("{% static 'fonts/RemixIconsDevice.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsDevice.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsdevice]:before {
+      font-family: RemixIconsDevice;
+      content: attr(data-ico-remixiconsdevice);
+    }
+
+    @font-face {
+      font-family: "RemixIconsDocument";
+      src: url("{% static 'fonts/RemixIconsDocument.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsDocument.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsdocument]:before {
+      font-family: RemixIconsDocument;
+      content: attr(data-ico-remixiconsdocument);
+    }
+
+    @font-face {
+      font-family: "RemixIconsEditor";
+      src: url("{% static 'fonts/RemixIconsEditor.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsEditor.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconseditor]:before {
+      font-family: RemixIconsEditor;
+      content: attr(data-ico-remixiconseditor);
+    }
+
+    @font-face {
+      font-family: "RemixIconsFinance";
+      src: url("{% static 'fonts/RemixIconsFinance.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsFinance.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsfinance]:before {
+      font-family: RemixIconsFinance;
+      content: attr(data-ico-remixiconsfinance);
+    }
+
+    @font-face {
+      font-family: "RemixIconsHealth";
+      src: url("{% static 'fonts/RemixIconsHealth.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsHealth.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconshealth]:before {
+      font-family: RemixIconsHealth;
+      content: attr(data-ico-remixiconshealth);
+    }
+
+    @font-face {
+      font-family: "RemixIconsLogos";
+      src: url("{% static 'fonts/RemixIconsLogos.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsLogos.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconslogos]:before {
+      font-family: RemixIconsLogos;
+      content: attr(data-ico-remixiconslogos);
+    }
+
+    @font-face {
+      font-family: "RemixIconsMap";
+      src: url("{% static 'fonts/RemixIconsMap.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsMap.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsmap]:before {
+      font-family: RemixIconsMap;
+      content: attr(data-ico-remixiconsmap);
+    }
+
+    @font-face {
+      font-family: "RemixIconsMedia";
+      src: url("{% static 'fonts/RemixIconsMedia.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsMedia.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsmedia]:before {
+      font-family: RemixIconsMedia;
+      content: attr(data-ico-remixiconsmedia);
+    }
+
+    @font-face {
+      font-family: "RemixIconsOthers";
+      src: url("{% static 'fonts/RemixIconsOthers.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsOthers.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsothers]:before {
+      font-family: RemixIconsOthers;
+      content: attr(data-ico-remixiconsothers);
+    }
+
+    @font-face {
+      font-family: "RemixIconsSystem";
+      src: url("{% static 'fonts/RemixIconsSystem.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsSystem.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconssystem]:before {
+      font-family: RemixIconsSystem;
+      content: attr(data-ico-remixiconssystem);
+    }
+
+    @font-face {
+      font-family: "RemixIconsUser";
+      src: url("{% static 'fonts/RemixIconsUser.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsUser.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsuser]:before {
+      font-family: RemixIconsUser;
+      content: attr(data-ico-remixiconsuser);
+    }
+
+    @font-face {
+      font-family: "RemixIconsWeather";
+      src: url("{% static 'fonts/RemixIconsWeather.woff' %}") format("woff"),
+      url("{% static 'fonts/RemixIconsWeather.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-remixiconsweather]:before {
+      font-family: RemixIconsWeather;
+      content: attr(data-ico-remixiconsweather);
+    }
+
+    @font-face {
+      font-family: "Services";
+      src: url("{% static 'fonts/Services.woff' %}") format("woff"),
+      url("{% static 'fonts/Services.ttf' %}") format("truetype");
+    }
+
+    *[data-ico-services]:before {
+      font-family: Services;
+      content: attr(data-ico-services);
+    }
+  </style>
+  <link rel="stylesheet" id="bt_bb_content_elements-css" href="{% static 'css/content_elements.crush5223.css' %}"
+    onload="this.media='all'" media="print">
+  <link rel="stylesheet" id="bt_bb_google_fonts-css"
+    href="https://fonts.googleapis.com/css2?family=Plus%20Jakarta%20Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&amp;family=IBM%20Plex%20Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&amp;subset=latin,latin-ext&amp;display=swap"
+    onload="this.media='all'" media="print">
+  <script src="{% static 'js/jquery.minf43b.js' %}" id="jquery-core-js" data-wp-strategy="defer" defer></script>
+  <script src="{% static 'js/slick.min5223.js' %}" id="bt_bb_slick-js" defer data-wp-strategy="defer"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min5223.js' %} " id="bt_bb_magnific-js" defer
+    data-wp-strategy="defer"></script>
+  <script src="{% static 'js/content_elements5223.js' %} " id="bt_bb-js" defer data-wp-strategy="defer"></script>
+  <script src="{% static 'js/hooks.min4fdd.js' %} " id="wp-hooks-js" data-wp-strategy="defer" defer></script>
+  <script src="{% static 'js/i18n.minc33c.js' %} " id="wp-i18n-js" data-wp-strategy="defer" defer></script>
+  <script id="wp-i18n-js-after">
+    wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+  </script>
+  <script src=" {% static 'js/index1eb7.js' %}" id="swv-js" defer data-wp-strategy="defer"></script>
+  <script src="{% static 'js/bt_framework_miscd1c0.js' %} " id="boldthemes-framework-misc-js" data-wp-strategy="defer"
+    defer></script>
+  <script id="boldthemes-framework-misc-js-after">
+    jQuery(document).ready(function ($) {
+      $('.bt_bb_image img').attr('title', '');
+      $('.bt_bb_button a').attr('title', '');
+      $('.bt_bb_image a').attr('title', '');
+    });
+    var boldthemes_dropdown = document.querySelector(".widget_categories #cat");
+    function boldthemes_onCatChange() {
+      if (boldthemes_dropdown.options[boldthemes_dropdown.selectedIndex].value > 0) {
+        location.href = "https://aiko.bold-themes.com/main-demo/?cat=" + boldthemes_dropdown.options[boldthemes_dropdown.selectedIndex].value;
+      }
+    }
+    if (boldthemes_dropdown !== null) {
+      boldthemes_dropdown.onchange = boldthemes_onCatChange;
+    }
+
+  </script>
+
+  <script src="{% static 'js/bt_bb_elements5223.js' %} " id="bt_bb_elements-js" defer data-wp-strategy="defer"></script>
+  <script src="{% static 'js/bt_bb_animated_headlined1c0.js' %} " id="bt_bb_animated_headline-js" defer
+    data-wp-strategy="defer"></script>
+
+  <script src="{% static 'js/bt_bb_card_icond1c0.js' %}  " id="bt_bb_card_icon-js" defer
+    data-wp-strategy="defer"></script>
+  <script src="{% static 'js/bt_bb_floating_imaged1c0.js' %} " id="bt_bb_floating_image-js" defer
+    data-wp-strategy="defer"></script>
+
 </body>
 
 </html>
