@@ -12,11 +12,11 @@
                     data-bt-override-class="{&quot;bt_bb_top_spacing_&quot;:{&quot;current_class&quot;:&quot;bt_bb_top_spacing_large&quot;,&quot;xxl&quot;:&quot;large&quot;},&quot;bt_bb_bottom_spacing_&quot;:{&quot;current_class&quot;:&quot;bt_bb_bottom_spacing_large&quot;,&quot;xxl&quot;:&quot;large&quot;},&quot;bt_bb_negative_margin_&quot;:{&quot;current_class&quot;:&quot;bt_bb_negative_margin_none&quot;,&quot;xxl&quot;:&quot;none&quot;}}">
                     <div class="bt_bb_background_image_holder_wrapper">
                         <div class="bt_bb_background_image_holder btLazyLoadBackground bt_bb_parallax"
-                            data-background_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/hero_about.jpg"
-                            data-parallax="0.9" data-parallax-offset="0" data-parallax-zoom-start="1"
-                            data-parallax-zoom-end="1" data-parallax-blur-start="0" data-parallax-blur-end="0"
-                            data-parallax-opacity-start="1" data-parallax-opacity-end="1"
-                            style=" background-image: url(https_/aiko.bold-themes.com/main-demo/wp-content/plugins/bold-page-builder/img/blank.html);">
+                            data-background_image_src="{% static 'images/hero_about.jpg' %} " data-parallax="0.9"
+                            data-parallax-offset="0" data-parallax-zoom-start="1" data-parallax-zoom-end="1"
+                            data-parallax-blur-start="0" data-parallax-blur-end="0" data-parallax-opacity-start="1"
+                            data-parallax-opacity-end="1"
+                            style=" background-image: url({ % static 'images/blank.html' %})">
                         </div>
                     </div>
                     <div class="bt_bb_port">
@@ -68,7 +68,7 @@
                         </div><!-- cell -->
                     </div><!-- port -->
                     <div class="bt_bb_section_bottom_section_coverage_image"><img decoding="async"
-                            src="../wp-content/uploads/sites/4/2023/11/bottom_white_02.png"
+                            src="{% static 'images/bottom_white_02.png' %}"
                             alt="bt_bb_section_bottom_section_coverage_image" /></div>
                 </section>
                 <section data-bb-version="4.7.5" id="bt_bb_section67f90ad980849"
@@ -112,11 +112,9 @@
                                                         class="bt_bb_image bt_bb_shape_square bt_bb_target_self bt_bb_align_inherit bt_bb_hover_style_simple bt_bb_content_display_always bt_bb_content_align_middle bt_bb_top_negative_margin_none bt_bb_bottom_negative_margin_none bt_bb_right_negative_margin_none bt_bb_left_negative_margin_none"
                                                         data-bt-override-class="{&quot;bt_bb_align_&quot;:{&quot;current_class&quot;:&quot;bt_bb_align_inherit&quot;,&quot;xxl&quot;:&quot;inherit&quot;},&quot;bt_bb_content_display_&quot;:{&quot;current_class&quot;:&quot;bt_bb_content_display_always&quot;,&quot;xxl&quot;:&quot;always&quot;},&quot;bt_bb_top_negative_margin_&quot;:{&quot;current_class&quot;:&quot;bt_bb_top_negative_margin_none&quot;,&quot;xxl&quot;:&quot;none&quot;},&quot;bt_bb_bottom_negative_margin_&quot;:{&quot;current_class&quot;:&quot;bt_bb_bottom_negative_margin_none&quot;,&quot;xxl&quot;:&quot;none&quot;},&quot;bt_bb_right_negative_margin_&quot;:{&quot;current_class&quot;:&quot;bt_bb_right_negative_margin_none&quot;,&quot;xxl&quot;:&quot;none&quot;},&quot;bt_bb_left_negative_margin_&quot;:{&quot;current_class&quot;:&quot;bt_bb_left_negative_margin_none&quot;,&quot;xxl&quot;:&quot;none&quot;}}">
                                                         <span><img loading="lazy" decoding="async" width="185"
-                                                                height="65"
-                                                                src="../wp-content/uploads/sites/4/2023/11/logotypes.png"
-                                                                class="attachment-full size-full"
-                                                                alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/logotypes.png"
-                                                                data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/logotypes.png"
+                                                                height="65" src="{% static 'images/logotypes.png' %} "
+                                                                class="attachment-full size-full" alt="logotypes.png"
+                                                                data-full_image_src="{% static 'images/logotypes.png' %} "
                                                                 title="logotypes" /></span>
                                                     </div>
                                                     <div data-bb-version="4.7.6" class="bt_bb_text">
@@ -253,12 +251,12 @@
                                                         <a href="../services/single-service/index.html" target="_self"
                                                             title="inner_about_01"><img loading="lazy" decoding="async"
                                                                 width="1220" height="690"
-                                                                src="../wp-content/uploads/sites/4/2023/11/inner_about_01.jpg"
+                                                                src="{% static 'images/inner_about_01.jpg' %}"
                                                                 class="attachment-full size-full"
-                                                                alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_01.jpg"
-                                                                data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_01.jpg"
+                                                                alt="inner_about_01.jpg"
+                                                                data-full_image_src="{% static 'images/inner_about_01.jpg' %}"
                                                                 title="inner_about_01"
-                                                                srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_01.jpg 1220w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_01-640x362.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_01-768x434.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_01-320x181.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_01-600x339.jpg 600w"
+                                                                srcset="{% static 'images/inner_about_01.jpg' %}"
                                                                 sizes="auto, (max-width: 1220px) 100vw, 1220px" /></a>
                                                     </div>
                                                     <div data-bb-version="4.5.9"
@@ -325,12 +323,12 @@
                                                         <a href="../services/single-service/index.html" target="_self"
                                                             title="inner_about_02"><img loading="lazy" decoding="async"
                                                                 width="1220" height="690"
-                                                                src="../wp-content/uploads/sites/4/2023/11/inner_about_02.jpg"
+                                                                src="{% static 'images/inner_about_02.jpg' %}"
                                                                 class="attachment-full size-full"
-                                                                alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_02.jpg"
-                                                                data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_02.jpg"
+                                                                alt="inner_about_02.jpg"
+                                                                data-full_image_src="{% static 'images/inner_about_02.jpg' %}"
                                                                 title="inner_about_02"
-                                                                srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_02.jpg 1220w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_02-640x362.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_02-768x434.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_02-320x181.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_02-600x339.jpg 600w"
+                                                                srcset="{% static 'images/inner_about_02.jpg' %}"
                                                                 sizes="auto, (max-width: 1220px) 100vw, 1220px" /></a>
                                                     </div>
                                                     <div data-bb-version="4.5.9"
@@ -397,12 +395,12 @@
                                                         <a href="../services/single-service/index.html" target="_self"
                                                             title="inner_about_03"><img loading="lazy" decoding="async"
                                                                 width="1220" height="690"
-                                                                src="../wp-content/uploads/sites/4/2023/11/inner_about_03.jpg"
+                                                                src="{% static 'images/inner_about_03.jpg' %}"
                                                                 class="attachment-full size-full"
-                                                                alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_03.jpg"
-                                                                data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_03.jpg"
+                                                                alt="inner_about_03.jpg"
+                                                                data-full_image_src="{% static 'images/inner_about_03.jpg' %}"
                                                                 title="inner_about_03"
-                                                                srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_03.jpg 1220w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_03-640x362.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_03-768x434.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_03-320x181.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_about_03-600x339.jpg 600w"
+                                                                srcset="{% static 'images/inner_about_03.jpg' %}"
                                                                 sizes="auto, (max-width: 1220px) 100vw, 1220px" /></a>
                                                     </div>
                                                     <div data-bb-version="4.5.9"
@@ -522,11 +520,11 @@
                         </div><!-- cell -->
                     </div><!-- port -->
                     <div class="bt_bb_section_top_section_coverage_image"><img decoding="async"
-                            src="../wp-content/uploads/sites/4/2023/11/top_white_03_01.png"
+                            src="{% static 'images/top_white_03_01.png' %} "
                             alt="bt_bb_section_top_section_coverage_image" /></div>
                     <div class="bt_bb_section_bottom_section_coverage_image"><img decoding="async"
-                            src="../wp-content/uploads/sites/4/2023/11/bottom_white_03_02.png"
-                            alt="bt_bb_section_bottom_section_coverage_image" /></div>
+                            src="{% static 'images/bottom_white_03_02.png' %}" alt="
+                            bt_bb_section_bottom_section_coverage_image" /></div>
                 </section>
                 <section data-bb-version="4.7.6" id="bt_bb_section67f90ad983e1c"
                     class="bt_bb_section bt_bb_layout_boxed_1400 bt_bb_vertical_align_top bt_bb_bottom_section_coverage_image bt_bb_section_with_bottom_coverage_image bt_bb_top_spacing_large bt_bb_bottom_spacing_large bt_bb_negative_margin_none bt_bb_negative_margin_none bt_bb_negative_margin_none bt_bb_negative_margin_none bt_bb_negative_margin_none"
@@ -843,7 +841,7 @@
                         </div><!-- cell -->
                     </div><!-- port -->
                     <div class="bt_bb_section_bottom_section_coverage_image"><img decoding="async"
-                            src="../wp-content/uploads/sites/4/2023/11/bottom_black_02.png"
+                            src=" {% static 'images/bottom_black_02.png' %} "
                             alt="bt_bb_section_bottom_section_coverage_image" /></div>
                 </section>
                 <section data-bb-version="4.7.6" id="bt_bb_section67f90ad984e27"
@@ -852,11 +850,11 @@
                     data-bt-override-class="{&quot;bt_bb_top_spacing_&quot;:{&quot;current_class&quot;:&quot;bt_bb_top_spacing_large&quot;,&quot;xxl&quot;:&quot;large&quot;},&quot;bt_bb_bottom_spacing_&quot;:{&quot;current_class&quot;:&quot;bt_bb_bottom_spacing_large&quot;,&quot;xxl&quot;:&quot;large&quot;},&quot;bt_bb_negative_margin_&quot;:{&quot;current_class&quot;:&quot;bt_bb_negative_margin_none&quot;,&quot;xxl&quot;:&quot;none&quot;}}">
                     <div class="bt_bb_background_image_holder_wrapper">
                         <div class="bt_bb_background_image_holder btLazyLoadBackground bt_bb_parallax"
-                            data-background_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/background_04.jpg"
-                            data-parallax="0.6" data-parallax-offset="0" data-parallax-zoom-start="1"
-                            data-parallax-zoom-end="1.05" data-parallax-blur-start="0" data-parallax-blur-end="0"
-                            data-parallax-opacity-start="1" data-parallax-opacity-end="1"
-                            style=" background-image: url(https_/aiko.bold-themes.com/main-demo/wp-content/plugins/bold-page-builder/img/blank.html);">
+                            data-background_image_src="{% static 'images/background_04.jpg' %} " data-parallax="0.6"
+                            data-parallax-offset="0" data-parallax-zoom-start="1" data-parallax-zoom-end="1.05"
+                            data-parallax-blur-start="0" data-parallax-blur-end="0" data-parallax-opacity-start="1"
+                            data-parallax-opacity-end="1"
+                            style=" background-image: url({% static 'images/blank.gif' %});">
                         </div>
                     </div>
                     <div class="bt_bb_port">
@@ -943,12 +941,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1220" height="690"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/inner_service_01.jpg"
+                                                                        src="{% static 'images/inner_service_01.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_01.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_01.jpg"
+                                                                        alt="inner_service_01.jpg"
+                                                                        data-full_image_src="{% static 'images/inner_service_01.jpg' %}"
                                                                         title="inner_service_01" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_01.jpg 1220w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_01-640x362.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_01-768x434.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_01-320x181.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_01-600x339.jpg 600w"
+                                                                        srcset="{% static 'images/inner_service_01.jpg' %}"
                                                                         sizes="(max-width: 1220px) 100vw, 1220px" /></span>
                                                             </div>
                                                         </div>
@@ -1057,12 +1055,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1220" height="690"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/inner_service_02.jpg"
+                                                                        src="{% static 'images/inner_service_02.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_02.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_02.jpg"
+                                                                        alt="inner_service_02.jpg"
+                                                                        data-full_image_src="{% static 'images/inner_service_02.jpg' %}"
                                                                         title="inner_service_02" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_02.jpg 1220w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_02-640x362.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_02-768x434.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_02-320x181.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_02-600x339.jpg 600w"
+                                                                        srcset="{% static 'images/inner_service_02.jpg' %}"
                                                                         sizes="(max-width: 1220px) 100vw, 1220px" /></span>
                                                             </div>
                                                         </div>
@@ -1171,12 +1169,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1220" height="690"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/inner_service_03.jpg"
+                                                                        src="{% static 'images/inner_service_03.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_03.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_03.jpg"
+                                                                        alt="inner_service_03.jpg"
+                                                                        data-full_image_src="{% static 'images/inner_service_03.jpg' %}"
                                                                         title="inner_service_03" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_03.jpg 1220w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_03-640x362.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_03-768x434.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_03-320x181.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/inner_service_03-600x339.jpg 600w"
+                                                                        srcset="{% static 'images/inner_service_03.jpg' %}"
                                                                         sizes="(max-width: 1220px) 100vw, 1220px" /></span>
                                                             </div>
                                                         </div>
@@ -1266,7 +1264,7 @@
                         </div><!-- cell -->
                     </div><!-- port -->
                     <div class="bt_bb_section_bottom_section_coverage_image"><img decoding="async"
-                            src="../wp-content/uploads/sites/4/2023/11/bottom_white_03.png"
+                            src="{% static 'images/bottom_white_03.png' %}"
                             alt="bt_bb_section_bottom_section_coverage_image" /></div>
                 </section>
                 <section data-bb-version="4.7.6" id="bt_bb_section67f90ad9867be"
@@ -1274,7 +1272,7 @@
                     data-bt-override-class="{&quot;bt_bb_top_spacing_&quot;:{&quot;current_class&quot;:&quot;bt_bb_top_spacing_large&quot;,&quot;xxl&quot;:&quot;large&quot;},&quot;bt_bb_bottom_spacing_&quot;:{&quot;current_class&quot;:&quot;bt_bb_bottom_spacing_medium&quot;,&quot;xxl&quot;:&quot;medium&quot;},&quot;bt_bb_negative_margin_&quot;:{&quot;current_class&quot;:&quot;bt_bb_negative_margin_none&quot;,&quot;xxl&quot;:&quot;none&quot;}}">
                     <div class="bt_bb_background_image_holder_wrapper">
                         <div class="bt_bb_background_image_holder btLazyLoadBackground bt_bb_parallax"
-                            data-background_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/background_about_02.jpg"
+                            data-background_image_src="{% static 'images/background_about_02.jpg' %}"
                             data-parallax="0.6" data-parallax-offset="0" data-parallax-zoom-start="1"
                             data-parallax-zoom-end="1" data-parallax-blur-start="0" data-parallax-blur-end="0"
                             data-parallax-opacity-start="1" data-parallax-opacity-end="1"
@@ -1341,12 +1339,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1000" height="1000"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/team_03.jpg"
+                                                                        src="{% static 'images/team_03.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03.jpg"
+                                                                        alt="team_03.jpg"
+                                                                        data-full_image_src="{% static 'images/team_03.jpg' %}"
                                                                         title="team_03" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03.jpg 1000w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03-640x640.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03-160x160.jpg 160w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03-768x768.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03-320x320.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03-300x300.jpg 300w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03-600x600.jpg 600w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_03-100x100.jpg 100w"
+                                                                        srcset="{% static 'images/team_03.jpg' %}"
                                                                         sizes="(max-width: 1000px) 100vw, 1000px" /></span>
                                                             </div>
                                                         </div>
@@ -1435,12 +1433,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1000" height="1000"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/team_01.jpg"
+                                                                        src="{% static 'images/team_01.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01.jpg"
+                                                                        alt="team_01.jpg"
+                                                                        data-full_image_src="{% static 'images/team_01.jpg' %}"
                                                                         title="team_01" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01.jpg 1000w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01-640x640.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01-160x160.jpg 160w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01-768x768.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01-320x320.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01-300x300.jpg 300w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01-600x600.jpg 600w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_01-100x100.jpg 100w"
+                                                                        srcset="{% static 'images/team_01.jpg' %}"
                                                                         sizes="(max-width: 1000px) 100vw, 1000px" /></span>
                                                             </div>
                                                         </div>
@@ -1529,12 +1527,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1000" height="1000"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/team_06.jpg"
+                                                                        src="{% static 'images/team_06.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06.jpg"
+                                                                        alt="team_06.jpg"
+                                                                        data-full_image_src="{% static 'images/team_06.jpg' %}"
                                                                         title="team_06" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06.jpg 1000w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06-640x640.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06-160x160.jpg 160w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06-768x768.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06-320x320.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06-300x300.jpg 300w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06-600x600.jpg 600w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_06-100x100.jpg 100w"
+                                                                        srcset="{% static 'images/team_06.jpg' %}"
                                                                         sizes="(max-width: 1000px) 100vw, 1000px" /></span>
                                                             </div>
                                                         </div>
@@ -1627,12 +1625,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1000" height="1000"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/team_02.jpg"
+                                                                        src="{% static 'images/team_02.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02.jpg"
+                                                                        alt="team_02.jpg"
+                                                                        data-full_image_src="{% static 'images/team_02.jpg' %}"
                                                                         title="team_02" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02.jpg 1000w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02-640x640.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02-160x160.jpg 160w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02-768x768.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02-320x320.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02-300x300.jpg 300w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02-600x600.jpg 600w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_02-100x100.jpg 100w"
+                                                                        srcset="{% static 'images/team_02.jpg' %}"
                                                                         sizes="(max-width: 1000px) 100vw, 1000px" /></span>
                                                             </div>
                                                         </div>
@@ -1721,12 +1719,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1000" height="1000"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/team_05.jpg"
+                                                                        src="{% static 'images/team_05.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05.jpg"
+                                                                        alt="team_05.jpg"
+                                                                        data-full_image_src="{% static 'images/team_05.jpg' %}"
                                                                         title="team_05" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05.jpg 1000w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05-640x640.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05-160x160.jpg 160w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05-768x768.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05-320x320.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05-300x300.jpg 300w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05-600x600.jpg 600w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_05-100x100.jpg 100w"
+                                                                        srcset="{% static 'images/team_05.jpg' %}"
                                                                         sizes="(max-width: 1000px) 100vw, 1000px" /></span>
                                                             </div>
                                                         </div>
@@ -1815,12 +1813,12 @@
                                                         <div class="bt_bb_card_image_image">
                                                             <div class="bt_bb_image" data-bt-override-class="{}">
                                                                 <span><img decoding="async" width="1000" height="1000"
-                                                                        src="../wp-content/uploads/sites/4/2023/11/team_04.jpg"
+                                                                        src="{% static 'images/team_04.jpg' %}"
                                                                         class="attachment-full size-full"
-                                                                        alt="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04.jpg"
-                                                                        data-full_image_src="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04.jpg"
+                                                                        alt="team_04.jpg"
+                                                                        data-full_image_src="{% static 'images/team_04.jpg' %}"
                                                                         title="team_04" loading="eager"
-                                                                        srcset="https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04.jpg 1000w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04-640x640.jpg 640w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04-160x160.jpg 160w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04-768x768.jpg 768w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04-320x320.jpg 320w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04-300x300.jpg 300w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04-600x600.jpg 600w, https://aiko.bold-themes.com/main-demo/wp-content/uploads/sites/4/2023/11/team_04-100x100.jpg 100w"
+                                                                        srcset="{% static 'images/team_04.jpg' %}"
                                                                         sizes="(max-width: 1000px) 100vw, 1000px" /></span>
                                                             </div>
                                                         </div>
@@ -1900,7 +1898,7 @@
                         </div><!-- cell -->
                     </div><!-- port -->
                     <div class="bt_bb_section_bottom_section_coverage_image"><img decoding="async"
-                            src="../wp-content/uploads/sites/4/2023/11/bottom_black_02.png"
+                            src="{% static 'images/bottom_black_02.png' %}"
                             alt="bt_bb_section_bottom_section_coverage_image" /></div>
                 </section>
             </div><span id="bt_bb_fe_preview_toggler" class="bt_bb_fe_preview_toggler" title="Edit/Preview"></span>
