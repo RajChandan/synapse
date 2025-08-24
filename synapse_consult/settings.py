@@ -28,8 +28,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 print(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
-
+DEBUG = False
+print(DEBUG)
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(",")
 

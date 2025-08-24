@@ -17,3 +17,6 @@ def terms_of_service(request):
 
 def privacy_policy(request):
     return render(request,'core/privacy_policy.html')
+
+def page_not_found_view(request, exception):
+    return render(request,'core/404.html', status=404)

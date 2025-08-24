@@ -26,3 +26,5 @@ urlpatterns = [
     path("pricing/", include("pricing.urls")),
     path("insider/", include("insider.urls")),
 ]
+
+handler404 = "core.views.page_not_found_view"
