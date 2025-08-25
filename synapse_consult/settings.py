@@ -31,7 +31,8 @@ print(SECRET_KEY)
 DEBUG = False
 print(DEBUG)
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(",")
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "[::1]", "vichan.in", "www.vichan.in"]
+print(ALLOWED_HOSTS,'---Allowedhosts')
 
 
 # Application definition
