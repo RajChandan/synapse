@@ -32,7 +32,7 @@ DEBUG = False
 print(DEBUG)
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "[::1]", "vichan.in", "www.vichan.in"]
-print(ALLOWED_HOSTS,'---Allowedhosts')
+print(ALLOWED_HOSTS, "---Allowedhosts")
 
 
 # Application definition
@@ -50,11 +50,12 @@ INSTALLED_APPS = [
     "industries",
     "pricing",
     "insider",
+    "chatbot",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",

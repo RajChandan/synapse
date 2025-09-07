@@ -63,19 +63,19 @@
                             <ul class="sub-menu">
                                 <li id="menu-item-1856"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1856">
-                                    <a href="{% url 'about' %}">Retail</a>
+                                    <a href="{% url 'retail' %}">Retail</a>
                                 </li>
                                 <li id="menu-item-1857"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1857">
-                                    <a href="about/about-me/index.html">Logistics</a>
+                                    <a href="{% url 'logistics' %}">Logistics</a>
                                 </li>
                                 <li id="menu-item-3261"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3261">
-                                    <a href="about/clients-partners/index.html">Manufacturing</a>
+                                    <a href="{% url 'manufacturing' %}">Manufacturing</a>
                                 </li>
                                 <li id="menu-item-42"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
-                                    <a href="about/contact/index.html">Startups & Emerging Businesses</a>
+                                    <a href="{% url 'startups' %}">Startups & Emerging Businesses</a>
                                 </li>
 
                             </ul>
@@ -139,7 +139,7 @@
                         </li>
                         <li id="menu-item-44"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-7  menu-item-has-children menu-item-44">
-                            <a href="/" aria-current="page">AI Chatbot</a>
+                            <a href="{% url 'chatbot' %}" aria-current="page">AI Chatbot</a>
 
                         </li>
 
